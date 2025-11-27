@@ -58,3 +58,21 @@ and primes ≤ 10⁶, by truncating these files.)
 
    ```bash
    pip install -r requirements.txt
+
+   
+## Programmatic use
+
+You can also use the engine directly:
+
+```python
+from rh_enforcer_engine import RHEngine
+
+eng = RHEngine.from_files(
+    zeros_path="riemann_zeros_1e8.txt",
+    primes_path="primes_up_to_1e8.txt",
+    num_x=800,
+    x_min=1e3,
+)
+
+print("log10 BF vs one zero at β=0.75:", eng.rh_evidence(beta=0.75, k=1))
+
