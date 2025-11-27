@@ -1,0 +1,40 @@
+1.	Prime-gap spacing KL term
+Unfold prime gaps
+[
+s_n = \frac{p_{n+1} - p_n}{\log p_n}
+]
+and compare the empirical spacing density to the GUE/Wigner spacing
+PDF via
+[
+KL(p_{\text{emp}} ,|, p_{\text{GUE}}).
+]
+	2.	Explicit formula energy
+For a log-spaced grid of x values,
+[
+\psi(x) \approx x - \sum_{\rho} \frac{x^\rho}{\rho},
+]
+with ρ = β + iγ. Under RH, β = 1/2 for all zeros; with counterfeit zeros,
+some β ≠ 1/2. The error
+[
+\frac{\psi(x) - x}{\sqrt{x}}
+]
+is penalized via
+[
+E = \int \Big(\frac{\psi(x) - x}{\sqrt{x}}\Big)^2 \frac{1}{x} , d(\log x).
+]
+	3.	Calibration
+Choose λ so that the RH-true energy matches the spacing KL
+(in nats):
+[
+\lambda \cdot E_{\text{RH}} \approx KL_{\text{spacing}}.
+]
+This lets us interpret changes in E as an effective extra KL penalty.
+	4.	Bayes factor
+For a scenario with k spurious zeros at real part β, we compute the
+increase in misfit
+[
+\Delta M = \lambda,(E_{\text{fake}} - E_{\text{RH}})
+]
+and convert it to a log₁₀ Bayes factor
+[
+\log_{10} \mathrm{BF} \approx \frac{\Delta M}{\ln 10}.
